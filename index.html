@@ -1,77 +1,13 @@
 <!DOCTYPE html>
 <html> 
-   <head>    
-    <style>
-    #edificio {
-      width: 150px;
-      height: 770px;
-      background-color: rgb(0, 122, 55);
-      position: relative;
-      }
-    
-    #Ascensor {
-      width: 100px;
-      height: 50px;
-      background-color:Yellow ;
-      position: absolute;
-      bottom: 0;
-      transition: bottom 3s ease-in-out;
-    }
-
-    #controlPanel {
-      position: absolute;
-      top: 500px;
-      left: 190px;
-      width: 130px;
-     /*border: 1px dashed rgb(150, 150, 150);*/
-      background-color:  rgb(185, 185, 185);
-      padding: 5px 20px 25px;
-       }
-
-
-      .boton { /*Botones del panel del Ascensor*/
-            padding: 5px 9px; /* Espacio alrededor de los botones */
-            background-color:  #505152;
-            color: #fff;
-            border: none;
-            cursor: pointer; 
-            margin-right: 7px; /* Espacio entre botones */
-        }
-
-        .boton2 { /*Boton del panel del Ascensor solo PB*/
-            padding: 5px 18px; /* Espacio alrededor de los botones */
-            background-color: #505152; 
-            color: #fff; 
-            border: none; 
-            cursor: pointer; 
-            margin-right: 8px; /* Espacio entre botones */
-        }
-
-        .botonTimbre { 
-            padding: 5px 40px; /* Espacio alrededor de los botones */
-            background-color: #ffc400; 
-            color: #fff; 
-            border: none; 
-            cursor: pointer; 
-            margin-right: 8px; /* Espacio entre botones */
-        }
-
-        .botonStop { 
-            padding: 5px 47px; /* Espacio alrededor de los botones */
-            background-color: #b90000; 
-            color: #fff; 
-            border: none; 
-            cursor: pointer; 
-            margin-right: 8px; /* Espacio entre botones */
-        }
-
-
-
-    </style>
+   <head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
   </head>   
   <body> 
    
     <audio id="Timbre" src=" .\sound\4254.mp3"></audio>
+
+    <script src="./script.js"></script>
 
     <div id="edificio">
       <div id="Ascensor"></div>
@@ -103,40 +39,6 @@
   </div>    
    
     <script> 
-    
-    function stop() {
-
-     console.info("STOP"); 
-   }
-
-    function timbre() {
-
-      var timbre = document.getElementById("Timbre");
-      timbre.play();
-    }
-
-    const Ascensor = document.getElementById("Ascensor");
-
-    function moverAscensor(piso) {               
-         cerrarPuerta();
-
-      const pixelPisos = 80; // Altura de cada piso en píxeles
-      const pisoDestino = piso * pixelPisos;
-      Ascensor.style.bottom = pisoDestino + "px";    
-          
-      setTimeout(abrirPuerta, 3000);
-   }   
-       
-    function cerrarPuerta() {
-              const cerrar = document.getElementById("Ascensor");
-              cerrar.style.backgroundColor = "gray";
-         }
-    
-    function abrirPuerta() {
-              const abrir = document.getElementById("Ascensor");
-              abrir.style.backgroundColor = "Yellow";
-   }
-
     </script>
 
   </body>
