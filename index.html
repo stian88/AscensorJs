@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html> 
+<html>
    <head>
-    <link rel="stylesheet" type="text/css" href="./style.css">
-  </head>   
-  <body> 
-   
-    <script src="./main.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="./style.css">    
+  </head>  
+  <body>
+    
+    <script type="text/javascript" src="./main.js"></script>   
+ 
     <audio id="Timbre" src=" .\sound\4254.mp3"></audio>
     
     
     <div id="edificio">
       <div id="Ascensor"></div>
-      <div id="puerta"></div>
+      <div id="puerta"></div>      
     </div>
-    
-    
+        
     <div id = "controlPanel">
     <p>Panel de botones del Ascensor</p>
     <button class="boton" onclick="moverAscensor(9)">Piso 9</button>
@@ -38,42 +37,6 @@
     <button class="botonStop" onclick="stop()">Stop</button>
     
   </div>    
-   
-<script> 
-
-function stop() {
-
-console.info("STOP"); 
-}
-
-function timbre() {
-
- var timbre = document.getElementById("Timbre");
- timbre.play();
-}
-
-const Ascensor = document.getElementById("Ascensor");
-
-function moverAscensor(piso) {               
-    cerrarPuerta();
-
- const pixelPisos = 80; // Altura de cada piso en píxeles
- const pisoDestino = piso * pixelPisos;
- Ascensor.style.bottom = pisoDestino + "px";    
-     
- setTimeout(abrirPuerta, 3000);
-}   
-  
-function cerrarPuerta() {
-         const cerrar = document.getElementById("Ascensor");
-         cerrar.style.backgroundColor = "gray";
-    }
-
-function abrirPuerta() {
-         const abrir = document.getElementById("Ascensor");
-         abrir.style.backgroundColor = "Yellow";
-}
-    </script>
 
   </body>
 </html>

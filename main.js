@@ -1,20 +1,17 @@
-import './style.css'
 
-   
-function stop() {
+   function stop() {
 
-    console.info("STOP"); 
+    window.alert('STOP'); 
   }
 
    function timbre() {
 
      var timbre = document.getElementById("Timbre");
      timbre.play();
-   }
+   }   
 
-   const Ascensor = document.getElementById("Ascensor");
-
-   function moverAscensor(piso) {               
+   function moverAscensor(piso) {   
+     const Ascensor = document.getElementById("Ascensor");            
         cerrarPuerta();
 
      const pixelPisos = 80; // Altura de cada piso en píxeles
