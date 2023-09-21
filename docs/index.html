@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        
+    <link rel="stylesheet" href="/AscensorJs/assets/index-714c8abd.css">
+  </head>  
+  <body>
+    
+    <script type="text/javascript" src="./main.js"></script>   
+ 
+    <audio id="Timbre" src=" .\sound\4254.mp3"></audio>
+    
+    
+    <div id="edificio">
+      <div id="Ascensor"></div>
+      <div id="puerta"></div>      
+    </div>
+        
+    <div id = "controlPanel">
+    <p>Panel de botones del Ascensor</p>
+    <button class="boton" onclick="moverAscensor(9)">Piso 9</button>
+    <button class="boton" onclick="moverAscensor(8)">Piso 8</button>
+    <br>    
+    <button class="boton" onclick="moverAscensor(7)">Piso 7</button>   
+    <button class="boton" onclick="moverAscensor(6)">Piso 6</button>  
+    <br>     
+    <button class="boton" onclick="moverAscensor(5)">Piso 5</button>
+    <button class="boton" onclick="moverAscensor(4)">Piso 4</button>  
+    <br>
+    <button class="boton" onclick="moverAscensor(3)">Piso 3</button>
+    <button class="boton" onclick="moverAscensor(2)">Piso 2</button>
+    <br>    
+    <button class="boton" onclick="moverAscensor(1)">Piso 1</button>
+    <button class="boton2" onclick="moverAscensor(0)">PB</button>
+    <br>
+    <button class="botonTimbre" onclick="timbre()">Timbre</button>
+    <br>
+    <button class="botonStop" onclick="stop()">Stop</button>
+    
+  </div>    
+
+  </body>
+</html>
